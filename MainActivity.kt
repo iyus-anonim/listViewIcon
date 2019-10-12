@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         list.add(Model("Susilo Bambang Yudhoyono", R.drawable.sby))
         list.add(Model("Joko widodo", R.drawable.jokowi))
 
+        listview.adapter=Listadaptor(this,R.layout.row, items = list)
+
 listview.setOnItemClickListener { parent, view, position, id ->
     if(position==0){
         Toast.makeText(this@MainActivity,"sukarno,  Presiden pertama Republik Indonesia" +
@@ -85,13 +87,9 @@ listview.setOnItemClickListener { parent, view, position, id ->
             Toast.LENGTH_SHORT ).show()
     }
 
-}
-
-
-
-   }
-
         }
+   }
+}
 
 
 
